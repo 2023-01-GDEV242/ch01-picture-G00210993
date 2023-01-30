@@ -11,6 +11,8 @@
  */
 public class Picture
 {
+    private Square sky;
+    private Square sand;
     private Square wall;
     private Square window;
     private Triangle roof;
@@ -22,6 +24,8 @@ public class Picture
      */
     public Picture()
     {
+        sky = new Square();
+        sand = new Square();
         wall = new Square();
         window = new Square();
         roof = new Triangle();  
@@ -35,6 +39,18 @@ public class Picture
     public void draw()
     {
         if(!drawn) {
+            sky.changeColor("blue");
+            sky.moveHorizontal(-310);
+            sky.moveVertical(-310);
+            sky.changeSize(500);
+            sky.makeVisible();
+            
+            sand.changeColor("yellow");
+            sand.moveHorizontal(-310);
+            sand.moveVertical(140);
+            sand.changeSize(500);
+            sand.makeVisible();
+            
             wall.moveHorizontal(-140);
             wall.moveVertical(20);
             wall.changeSize(120);
