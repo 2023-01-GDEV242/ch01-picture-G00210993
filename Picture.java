@@ -7,7 +7,10 @@
  * This class was written as an early example for teaching Java with BlueJ.
  * 
  * @author  Michael Kšlling and David J. Barnes
- * @version 2016.02.29
+ * @author  Michael B
+ * @version 2023.01.30
+ * 
+ * This image represents the houses of Spongebob, Patrick, and Squidward.
  */
 public class Picture
 {
@@ -92,7 +95,6 @@ public class Picture
             house.moveVertical(20);
             house.changeSize(120);
             house.makeVisible();
-            
             house2.changeColor("darkblue");
             house2.moveHorizontal(-140);
             house2.moveVertical(-40);
@@ -166,20 +168,17 @@ public class Picture
             eyebrow1.moveHorizontal(-120);
             eyebrow1.moveVertical(-9);
             eyebrow1.changeSize(20);
-            eyebrow1.makeVisible(); 
-            
+            eyebrow1.makeVisible();
             eyebrow2.changeColor("blue");
             eyebrow2.moveHorizontal(-100);
             eyebrow2.moveVertical(-9);
             eyebrow2.changeSize(20);
             eyebrow2.makeVisible(); 
-            
             eyebrow3.changeColor("blue");
             eyebrow3.moveHorizontal(-80);
             eyebrow3.moveVertical(-9);
             eyebrow3.changeSize(20);
             eyebrow3.makeVisible();
-            
             eyebrow4.changeColor("blue");
             eyebrow4.moveHorizontal(-60);
             eyebrow4.moveVertical(-9);
