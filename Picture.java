@@ -13,10 +13,25 @@ public class Picture
 {
     private Square sky;
     private Square sand;
-    private Square wall;
-    private Square window;
+    private Square house;
+    private Square house2;
+    private Square door;
+    private Circle doorArch;
     private Triangle roof;
-    private Circle sun;
+    private Square pineapple;
+    private Square door2;
+    private Circle door2Arch;
+    private Circle window1;
+    private Circle window2;
+    private Circle eyeLeft;
+    private Circle eyeRight;
+    private Circle rock;
+    private Triangle nose;
+    private Square eyebrow1;
+    private Square eyebrow2;
+    private Square eyebrow3;
+    private Square eyebrow4;
+    private Person person;
     private boolean drawn;
 
     /**
@@ -25,11 +40,26 @@ public class Picture
     public Picture()
     {
         sky = new Square();
+        rock = new Circle();
         sand = new Square();
-        wall = new Square();
-        window = new Square();
-        roof = new Triangle();  
-        sun = new Circle();
+        house = new Square();
+        house2 = new Square();
+        door = new Square();
+        doorArch = new Circle();
+        pineapple = new Square();
+        door2 = new Square();
+        door2Arch = new Circle();
+        roof = new Triangle();
+        window1 = new Circle();
+        window2 = new Circle();
+        eyeLeft = new Circle();
+        eyeRight = new Circle();
+        nose = new Triangle();
+        eyebrow1 = new Square();
+        eyebrow2 = new Square();
+        eyebrow3 = new Square();
+        eyebrow4 = new Square();
+        person = new Person();
         drawn = false;
     }
 
@@ -39,39 +69,128 @@ public class Picture
     public void draw()
     {
         if(!drawn) {
-            sky.changeColor("blue");
+            sky.changeColor("skyblue");
             sky.moveHorizontal(-310);
             sky.moveVertical(-310);
             sky.changeSize(500);
             sky.makeVisible();
             
-            sand.changeColor("yellow");
+            rock.changeColor("brown");
+            rock.moveHorizontal(-200);
+            rock.moveVertical(115);
+            rock.changeSize(108);
+            rock.makeVisible();
+            
+            sand.changeColor("lightyellow");
             sand.moveHorizontal(-310);
             sand.moveVertical(140);
             sand.changeSize(500);
             sand.makeVisible();
             
-            wall.moveHorizontal(-140);
-            wall.moveVertical(20);
-            wall.changeSize(120);
-            wall.makeVisible();
+            house.changeColor("darkblue");
+            house.moveHorizontal(-140);
+            house.moveVertical(20);
+            house.changeSize(120);
+            house.makeVisible();
             
-            window.changeColor("black");
-            window.moveHorizontal(-120);
-            window.moveVertical(40);
-            window.changeSize(40);
-            window.makeVisible();
-    
+            house2.changeColor("darkblue");
+            house2.moveHorizontal(-140);
+            house2.moveVertical(-40);
+            house2.changeSize(120);
+            house2.makeVisible();
+            
+            door.changeColor("brown");
+            door.moveHorizontal(-100);
+            door.moveVertical(100);
+            door.changeSize(40);
+            door.makeVisible();    
+            doorArch.changeColor("brown");
+            doorArch.moveHorizontal(-20);
+            doorArch.moveVertical(110);
+            doorArch.changeSize(40);
+            doorArch.makeVisible();            
+            
+            pineapple.changeColor("orange");
+            pineapple.moveHorizontal(25);
+            pineapple.moveVertical(20);
+            pineapple.changeSize(120);
+            pineapple.makeVisible();
+            
+            door2.changeColor("lightblue");
+            door2.moveHorizontal(65);
+            door2.moveVertical(100);
+            door2.changeSize(40);
+            door2.makeVisible();
+            door2Arch.changeColor("lightblue");
+            door2Arch.moveHorizontal(145);
+            door2Arch.moveVertical(110);
+            door2Arch.changeSize(40);
+            door2Arch.makeVisible();
+            
             roof.changeSize(60, 180);
-            roof.moveHorizontal(20);
+            roof.moveHorizontal(185);
             roof.moveVertical(-60);
             roof.makeVisible();
-    
-            sun.changeColor("yellow");
-            sun.moveHorizontal(100);
-            sun.moveVertical(-40);
-            sun.changeSize(80);
-            sun.makeVisible();
+            
+            window1.changeColor("lightblue");
+            window1.moveHorizontal(120);
+            window1.moveVertical(65);
+            window1.changeSize(25);
+            window1.makeVisible();
+            
+            window2.changeColor("lightblue");
+            window2.moveHorizontal(192);
+            window2.moveVertical(115);
+            window2.changeSize(25);
+            window2.makeVisible();
+            
+            eyeLeft.changeColor("lightblue");
+            eyeLeft.moveHorizontal(-40);
+            eyeLeft.moveVertical(40);
+            eyeLeft.changeSize(25);
+            eyeLeft.makeVisible();
+            
+            eyeRight.changeColor("lightblue");
+            eyeRight.moveHorizontal(15);
+            eyeRight.moveVertical(40);
+            eyeRight.changeSize(25);
+            eyeRight.makeVisible();
+            
+            nose.changeColor("blue");
+            nose.changeSize(65, 40);
+            nose.moveHorizontal(20);
+            nose.moveVertical(-4);
+            nose.makeVisible();
+            
+            eyebrow1.changeColor("blue");
+            eyebrow1.moveHorizontal(-120);
+            eyebrow1.moveVertical(-9);
+            eyebrow1.changeSize(20);
+            eyebrow1.makeVisible(); 
+            
+            eyebrow2.changeColor("blue");
+            eyebrow2.moveHorizontal(-100);
+            eyebrow2.moveVertical(-9);
+            eyebrow2.changeSize(20);
+            eyebrow2.makeVisible(); 
+            
+            eyebrow3.changeColor("blue");
+            eyebrow3.moveHorizontal(-80);
+            eyebrow3.moveVertical(-9);
+            eyebrow3.changeSize(20);
+            eyebrow3.makeVisible();
+            
+            eyebrow4.changeColor("blue");
+            eyebrow4.moveHorizontal(-60);
+            eyebrow4.moveVertical(-9);
+            eyebrow4.changeSize(20);
+            eyebrow4.makeVisible();
+            
+            person.moveHorizontal(70);
+            person.moveVertical(70);
+            person.changeSize(40, 20);
+            person.makeVisible();
+            
             drawn = true;
         }
     }
@@ -81,10 +200,27 @@ public class Picture
      */
     public void setBlackAndWhite()
     {
-        wall.changeColor("black");
-        window.changeColor("white");
+        sky.changeColor("white");
+        rock.changeColor("black");
+        sand.changeColor("black");
+        house.changeColor("black");
+        house2.changeColor("black");
+        door.changeColor("white");
+        doorArch.changeColor("white");
+        pineapple.changeColor("black");
+        door2.changeColor("white");
+        door2Arch.changeColor("white");
         roof.changeColor("black");
-        sun.changeColor("black");
+        window1.changeColor("white");
+        window2.changeColor("white");
+        eyeLeft.changeColor("white");
+        eyeRight.changeColor("white");
+        nose.changeColor("white");
+        eyebrow1.changeColor("white");
+        eyebrow2.changeColor("white");
+        eyebrow3.changeColor("white");
+        eyebrow4.changeColor("white");
+        person.changeColor("white");
     }
 
     /**
@@ -92,9 +228,26 @@ public class Picture
      */
     public void setColor()
     {
-        wall.changeColor("red");
-        window.changeColor("black");
+        sky.changeColor("skyblue");
+        rock.changeColor("brown");
+        sand.changeColor("lightyellow");
+        house.changeColor("darkblue");
+        house2.changeColor("darkblue");
+        door.changeColor("brown");
+        doorArch.changeColor("brown");
+        pineapple.changeColor("orange");
+        door2.changeColor("lightblue");
+        door2Arch.changeColor("lightblue");
         roof.changeColor("green");
-        sun.changeColor("yellow");
+        window1.changeColor("lightblue");
+        window2.changeColor("lightblue");
+        eyeLeft.changeColor("lightblue");
+        eyeRight.changeColor("lightblue");
+        nose.changeColor("lightblue");
+        eyebrow1.changeColor("blue");
+        eyebrow2.changeColor("blue");
+        eyebrow3.changeColor("blue");
+        eyebrow4.changeColor("blue");
+        person.changeColor("black");
     }
 }
